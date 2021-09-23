@@ -5,12 +5,12 @@
   */
 const links = [
     {
-      label: "Week 1 Notes",
+      label: "Week 1",
       url: "week1/index.html"
     },
     {
-        label: "Week 2 Notes",
-        url: "week2/index.html"
+        label: "Week 2",
+        url: "week2/w02-index.html"
     },
     {
         label: "Challenge:1 Todo",
