@@ -12,19 +12,113 @@
     <header>
         <h1> Week 2 Notes</h1>
     </header>
-    <main> <h2>Notes</h2>
+    <main>
         <h3>Chapter 2: Programming Basics</h3>
-        <h4>Commenting Code</h4>
-        <p>
-            Commenting code is important! If will be helpful when you come back to your assignment in a few days or 
-            even a few years later. It will explain what each snippet of code does and it's purpose.
-        </p>
-        <p>
-            To write a comment simply enter // to comment one line of code.
-        </p>
-        <p>
-            Multi-line comment starts with a /* and ends in a */.
-        </p>
+            <h4>Commenting Code</h4>
+                <p>
+                    Commenting code is important! If will be helpful when you come back to your assignment in a few days or 
+                    even a few years later. It will explain what each snippet of code does and it's purpose.
+                </p>
+                <p>
+                    To write a comment simply enter // to comment one line of code.
+                </p>
+                <p>
+                    Multi-line comment starts with a /* and ends in a */.
+                </p>
+            <h4>Syntax/Grammar</h4>
+                <p>
+                    Javascript syntax is known as C-style syntax because of its similarities with theC programming language.
+                    It’s considered best practice to combine the two and write each statement on a new line, terminated by a semi-colon.
+                </p>
+                <p>
+                    Example:<br>
+                    const message = 'Hello World!';<br> 
+                    alert(message);
+                </p>
+                <p>
+                    A block is a series of statements that are collected together inside curly braces
+                </p>
+                <p>
+                    Example:<br>
+                    {
+                        // this is a block containing 2 statements<br>
+                            const message = 'Hello!';<br>
+                            alert(message);
+                        }
+                </p>
+            <h4> Primitive Data Types </h4>
+                <p>
+                    Here are some of the types listed below:
+                </p>  
+                <li>String</li>
+                <li>Symbol (The symbol primitive data type was only introduced in ES6.)</li>
+                <li>Number</li>   
+                <li>Boolean</li>   
+                <li>Undefined</li>    
+                <li>Null</li>    
+                  <p>
+                    Any value that isn’t one of the primitive data types listed above is an <strong>object</strong>. These include arrays, functions and object literals.
+                  </p>
+                  <p>
+                      Example:<br>
+                      typeof 'hello'<br>
+                    << 'string'<br>
+                    typeof 10<br>
+                    << 'number'<br>
+                    typeof true<br>
+                    << 'boolean'<br>
+                    typeof { ninja: 'turtle' }<br>
+                    << 'object'<br>
+                    typeof [ 1, 2, 3 ]<br>
+                    << 'object' (All non-primitive data types return a type of 'object'.)<br>
+                  </p>
+            <h4> Declaring and Assigning Variables</h4>
+                <p>
+                    Make sure that your names for the variables describe what the variable is. Constant and variable names can start with any upper or 
+                    lower-case letter, an underscore, _ , or dollar character, $ . They can also contain numbers, but cannot start with them. Remember to BE CONSISTENT.<br>
+                    <strong>const</strong> = a variable that is always constant and wont be changed.<br>
+                    <strong>let</strong> = a variable that may be reassigned later. (This is used instead of var now)
+                </p>
+                <p>Example:<br>
+                    let score = 0; // This value may change during the programming
+                </p>
+                <p>
+                    To see the value of a variable, simply enter it in the console and press enter <br>
+                    name
+                    << 'Alexa'
+                </p>
+                <p>
+                    You can even declare and assign multiple variables at the same time if you separate them with commas:
+                </p>
+                <p>
+                    Example: <br>let x = 3, y = 4, z = 5;
+                </p>
+                <p>
+                    <strong>You should try to use <u>const</u> to declare most variables.</strong>
+                </p>
+                <p>
+                    Using const and let to declare variables means they are block scoped, so their value only exists inside the block they are declared in.
+                </p>
+                <p>If you assign a non-primitive value to a variable, then this is done by reference, so any changes that are subsequently made will affect all references to that object:
+                    <br>
+                    const c = { value: 1 };<br>
+                    let d = c; // c.value = 1, d.value = 1<br>
+                    d.value = 2; // c.value = 2, d.value = 2<br>
+                    In the example above, the change to the value property of d also results in the value property of c changing as well. This is because the variables c and d are both 
+                    referencing the same object, so any changes to one of them will also affect the other.
+                </p>
+            <h4>
+                Global Scope
+            </h4>
+            <p>
+                Any variable declared outside of a block is said to have global scope. It is not considered good practice
+                <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt1b?fromShare=true">Learn more here. </a>
+                In ES6, blocks can be used to create a local scope. This means that any variables defined inside a block using the let or const will only be available inside 
+                that block and not be accessible outside of that block.
+            </p>
+                    
+                    
+
     </main>
     <footer>
         <div>

@@ -1,9 +1,9 @@
 function addNumbers(){
-    //collects numbers from input id numInput1
-    let x = parseInt(document.getElementById("numInput1").value);
+    //collects numbers from input id input1
+    let x = parseInt(document.getElementById("input1").value);
     //defines output value
     let output = 0;
-    //creates loop for i to = to numInput1 value
+    //creates loop for i to = to input1 value
     if(isNaN(x)){
         alert("Invalid input Please use a number");
     } else{
@@ -18,11 +18,11 @@ function addNumbers(){
     document.getElementById("output1").innerHTML = output;
 }
 
-function addNumberTwo(){
+function addNumber2(){
     //collects number from id numInput1
-    let x = parseInt(document.getElementById("numInput1").value);
+    let x = parseInt(document.getElementById("input1").value);
     //collects nub
-    let y = parseInt(document.getElementById("numInput2").value);
+    let y = parseInt(document.getElementById("output2").value);
     //adds x and y together for output
     let output = x + y
 

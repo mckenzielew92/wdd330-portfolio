@@ -3,39 +3,44 @@
 <head>
    <meta http-equiv="X-UA-Compatible" content="IE-edge">
    <meta charset="UTF-8">
-   <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+   <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
    <meta name = "description" content= "This is my page containing notes and projects from week 2 of WDD 330 at BYUI 2021">
    <title>WDD 330 Week 2</title>
+   <link rel="stylesheet" href="" type="text/css" media="screen"/>
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">  -->
     
 </head>
 <body>
-    <h1>Week 2</h1>
-    <h2>
-        Assignment
-    </h2>
-        <legend>
-            Additional Information or Comments
-        </legend>
-        <div class="numbersInput">
-            <label>Please enter a number:</label><br>
-            <textarea id="numInput1" name="comments" rows="1" cols="5"></textarea>
-        </div>
-        <button class = "btn" type="button" onlcick="addNumbers()">Submit</button>
-            <div id="output1">
-                <p>The sum of all the numbers less than your number and your number is:</p>
-            </div>
+    <header>
+        <h1>Week 2</h1>
+    </header>
+    <main>
+
+        <h2>
+            Group Activity
+        </h2>
+
             <div class="numbersInput">
-                <label>Please enter another number:</label><br>
-                <textarea id="numInput2" rows="1" cols="5"></textarea>
+                <label>Please enter a number:</label><br>
+                <textarea id="input1" name="comments" rows="1" cols="5"></textarea>
             </div>
-            <button class = "btn" type="button" onlcick="addNumbersTwo()">Submit</button>
+            <button type=button onclick="addNumbers()">Let's Go!</button>
+                <div id="output1">
+                </div>
 
-            <div id="output2">
 
-            </div>
-    <h2>Notes on the Assigned Readings</h2>
-    <a href="notes.html">Notes</a>
+                <div class="numbersInput">
+                    <label>What's the sum of the two numbers entered?:</label><br>
+                    <textarea id="input2" rows="1" cols="5"></textarea>
+                </div>
+                <button type=button onclick="addNumbers2()">Find out!</button>
+                <div id="output2">
+                </div>
+
+
+        <h2>Notes on the Assigned Readings</h2>
+        <a href="notes.html">Notes</a>
+    </main>
     <footer>
         <div>
             <a href="/index.html">Back to Portfolio</a>
