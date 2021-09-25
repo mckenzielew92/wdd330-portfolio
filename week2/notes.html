@@ -163,6 +163,50 @@
                         More info on NaN
                     </a>
                 </p>
+            <h4>
+                Strings
+            </h4>
+                <p>
+                    When using strings use the back-ticks instead of any kind of quotation marks. 
+                    This will make it so you can use ' as well as " in your strings.
+                </p>
+            <h4>
+                Incrementing Values
+            </h4>
+                <p>
+                    May use ++ or -- to increment by one either way.
+                </p>
+                <p>
+                    Example:<br>
+                    points++; // will return 6, then increase points to 7
+                    << 6<br>
+                    ++points; // will increase points to 8, then return it
+                    << 8
+                </p>
+            <h4>
+                Converting Strings to Numbers
+            </h4>
+                <p>
+                    The best way to change a string to a number is to use the Number method. This will convert the string form of a number into an actual number:<br>
+                    Example:<br>
+                    Number('23');<br>
+                    << 23
+                </p>
+                <p>
+                    You can also multiply a numerical string by 1 , which will coerce it into a number:<br>
+                    const answer = '5' * 1;<br>
+                    << 5<br>
+                    typeof answer;<br>
+                    << "number"
+                </p>
+                <p>
+                    Another trick is to simply place a + operator in front of it:<br>
+                    Example:<br>
+                    const answer = +'5';<br>
+                    << 5<br>
+                    typeof answer;<br>
+                    << 'number'
+                </p>
             
                     
 
