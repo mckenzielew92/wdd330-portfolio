@@ -13,7 +13,26 @@
         <h1> Week 2 Notes</h1>
     </header>
     <main>
-        <h3>Chapter 2: Programming Basics</h3>
+        <h2>Chapter 2: Programming Basics</h2>
+            <h4>Chapter Summary</h4>
+            
+                <p>
+                    Comments are ignored by the program, but make your program easier to read and understand
+                    Data types are the basic building blocks of all JavaScript programs.
+                    There are six primitive data types: strings, symbols, numbers, Booleans, undefined and null.
+                    Non-primitive data types, such as arrays, functions and objects, all have a type of 'object'.
+                    Variables point to values stored in memory and are declared using the const or let keywords.
+                    Values are assigned to variables using the = operator.
+                    Strings and numbers have various properties and methods that provide information about them.
+                    Symbols are unique, immutable values.
+                    Boolean values are either true or false .
+                    There are only seven values that are false in JavaScript and these are known as 'falsy' values.
+                    Data types can be converted into other data types.
+                    Type coercion is when JavaScript tries to convert a value into another data type in order to perform an operation.
+                    Logical operators can be used to check if compound statements are true or false.
+                    Values can be compared to see if they are equal, greater than or less than other values.
+                </p>
+        
             <h4>Commenting Code</h4>
                 <p>
                     Commenting code is important! If will be helpful when you come back to your assignment in a few days or 
@@ -150,7 +169,11 @@
                 </p>
             <h4>
                 Arithmetic Operations
-            </h4>    
+            </h4>  
+                <p>
+                    Use ** to exponent a number, not ^. 
+                </p>  
+
                 <p>
                     <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt5v?fromShare=true">Go here</a> for information 
                     on Arithmetic Operations.
@@ -193,22 +216,78 @@
                     << 23
                 </p>
                 <p>
-                    You can also multiply a numerical string by 1 , which will coerce it into a number:<br>
-                    const answer = '5' * 1;<br>
-                    << 5<br>
-                    typeof answer;<br>
-                    << "number"
+                    The preferred way of changing a number to a string is to use the String function:
+                    Example:<br>
+                    String(3);<br>
+                    << '3'
                 </p>
                 <p>
-                    Another trick is to simply place a + operator in front of it:<br>
+                    Another option is to use the toString() method<br>
                     Example:<br>
-                    const answer = +'5';<br>
-                    << 5<br>
-                    typeof answer;<br>
-                    << 'number'
+                    10..toString();<br>
+                    << '10'
                 </p>
-            
-                    
+            <h4>
+                Boolean
+            </h4>
+                <p>
+                    Only two values with a boolean, true or false.
+                </p>
+                <p>
+                    9 values that are always false:
+                </p>
+                <li>
+                    "" // double quoted empty string literal
+                </li>
+                <li>
+                    '' // single quoted empty string literal
+                </li>
+                <li>
+                    `` // empty template literal
+                </li>
+                <li>
+                    * 0
+                </li>
+                <li>
+                    -0 // considered different to 0 by JavaScript!
+                </li>
+                <li>
+                    NaN
+                </li>
+                <li>
+                    false
+                </li>
+                <li>
+                    null
+                </li>
+                <li>
+                    undefined
+                </li>
+                <p>Use == to do an equals sign as just one = is for 
+                    assigning variables. Using === is the hard operator for if something it equal and will only
+                    return true if it is equal to a number and doesn't include a string.
+                </p>
+               
+            <h4>
+                Logical Operators
+            </h4>   
+                <li>
+                    ! means not
+                </li>     
+                <li>
+                    && mean and
+                </li> 
+                <li>
+                    || mean or
+                </li>  
+                <li>
+                        !== means not equal
+                </li> 
+
+            <button class="chQuiz" type=button onclick="ninjaQuiz()">
+                Quiz Ninja Project
+            </button>
+
 
     </main>
     <footer>
@@ -216,5 +295,6 @@
             <a href="/index.html">Back to Portfolio</a>
         </div>
     </footer>
+    <script src="w02.js"></script>
 </body>
 </html>
