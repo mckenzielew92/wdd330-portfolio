@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content= "This is my page containing notes and projects from week 2 of WDD 330 at BYUI 2021">
+    <title>WDD 330 Week <!--Insert Week Here--></title>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> Week 2 Notes</h1>
+    </header>
+    <main>
+        <h2>Chapter 3: Arrays, Logic, and Loops</h2>
+        <h4>Chapter Summary</h4>
+            <p>
+                This chapter covers data structures to store lists of values.
+                They include arrays, sets and maps. This chapter also includes Logical
+                statements that control the flow of the program, including loops.
+            </p>
+
+        <h4>
+            Arrays
+        </h4>
+            <p>
+                An array is an ordered list of values. Starts with a pair of square brackets. []<br>
+                Example:<br>
+                const myArray = [];<br>
+                <<. []
+            </p>
+            <p>
+                We can find out the value of an element 0 in myArray using:<br>
+                myArray[0]<br>
+                This is referring to it's index.
+            </p>
+            <p>
+                To find the length of an array, we can use the length property:<br>
+                Example:<br>
+                myArray.length;<br>
+                << 6<br>
+                To find the last element value in an array you will do:<br>
+                avengers[avengers.length - 1];<br>
+<< 'Black Widow'<br>
+                Notice that in order to get the last element you need to add -1 because
+                the arrays start with 0. You can make an array longer by doing this:<br>
+                myArray.length = 8;<br>
+                If your array originally had 3 elements now it has 8, and the added elements will
+                be undefined. You can do this same thing to make it smaller and the elements over
+                the amount defined will be removed.
+            </p>
+
+        <h4>
+            Adding Values to an Array
+        </h4>
+            <p>
+                To assign my name to the first element of myArray we can assign it
+                to element 0 like so:<br>
+                myArray[0] = 'McKenzie';<br>
+                As you can see, each element of an array can be re-assigned like a variable using the =. You
+                can see what your array looks like by typing it in the console: myArray;
+            </p>
+        <h4>
+            Removing Values from Arrays
+        </h4>
+            <p>
+                You can use the delete operator. And that element will become undefined. The array
+                will have the same number of elements, and undefined will take it's place.<br>
+                Example:<br>
+                delete McKenzie[0];
+            </p>
+        <h4>
+            Destructuring Arrays
+        </h4>
+            <p>
+                You can learn about destructuring arrays, or changing the values of the elements or
+                changing the order by reading about it <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/3/k01nwtdb?fromShare=true">here.</a>
+            </p>
+        <h4>
+            Pop, Push Shift and Unshift
+        </h4>    
+            <p>
+                To remove the last item of an array you use the pop() method.<br>
+                Example:<br>
+                avengers.pop();
+            </p>
+            <p>
+                Shift removed the first element of an array:<br>
+                Example:<br>
+                avengers.shift();
+            </p>
+            <p>
+                Push method appends a new value to the end of an array:<br>
+                avengers.push('Thor');
+            </p>
+            <p>
+                Then you can use the unshift() to add an element at the beginning of the array.
+            </p>
+
+    </main>
+    <footer>
+        <div>
+            <a href="/index.html">Back to Portfolio</a>
+        </div>
+    </footer>
+    <script src="w02.js"></script>
+</body>
+</html>
