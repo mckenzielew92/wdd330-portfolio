@@ -31,6 +31,9 @@ function addNumbers2(){
 }
 
 
+
+
+//activity for week 2 notes ch.2
 function ninjaQuiz(){
 //js for Notes ch.2
 //This declares a variable called question and assigns the string 
@@ -43,4 +46,35 @@ const answer = prompt(question);
 //Finally, we use an alert dialog to display the player's answer using string interpolation to 
 //insert the value of answer into the template literal that is displayed in an alert box:
 alert(`You answered ${answer}`);
+}
+
+
+
+
+//activity for week 2 notes ch.3
+function ninjaQuizCh3(){
+//Create an array called quiz that contains all the questions and answers. Each element in quiz will be 
+//a nested array that contains the question as its first element and the answer as its second element.
+const quiz = [
+    ["What is Superman's real name?", "Clark Kent"],
+    ["What is Wonder Woman's real name?" , "Diana Prince"],
+    ["What is Batman's real name?" , "Bruce Wayne"]
+];
+
+let score = 0;//initializer score
+/*Then we'll loop through the array using a for-of loop, assigning the variables question and answer to each key and value in the map.
+The loop starts by asking the question using a prompt dialog that allows the player to enter an answer that is stored in a variable called 
+response. We can then compare this to the actual answer stored as answer : */
+
+for(const [question,answer] of quiz) {
+    const response = prompt(question);
+    if(response === answer){
+        alert('Correct!');
+        score++;
+    } else{
+        alert(`Wrong! The correct answer was ${answer}`);
+    }
+}
+// At the end of the game, report the player's score
+alert(`Game Over, you scored ${score} point${score !== 1 ? 's!' : ''}`);
 }

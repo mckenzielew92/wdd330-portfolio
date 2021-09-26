@@ -204,8 +204,139 @@ It's also possible to use the Array.from() method to convert a set into an array
             Maps
         </h4>
             <p>
-
+                To create a map:<br>
+                const romanNumerals = new Map();<br>
+                Use the set() method to add a key and value pair to the map:<br>
+                romanNumerals.ser(1,'I');<br>
+                You can set multiple like so:<br>
+                romanNumerals.set(2,'II').set(3,'III').set(4,'IV').set(5,'V');
             </p>
+            <p>
+                Maps are like dictionaries where you can look up the value based on the key:<br>
+                romanNumerals.get(4);
+                << 'IV';<br>
+                The has() method will tell you if the key exists:<br>
+                romanNumerals.has(5);
+            </p>
+            <p>
+                Maps can be converted to arrays. Learn more <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/3/k01nwtiv?fromShare=true">here</a>
+            </p>
+        <h4>
+            If Statements
+        </h4>
+        <p>
+            Example:<br>
+            const age = 23;<br>
+            if (age < 18) {<br>
+            console.log('Sorry, you are not old enough to play this game');<br>
+            }
+        </p>
+        <h4>
+            Else Statements
+        </h4>>
+            <p>
+                if (condition) {<br>
+                    // code to run if condition is true<br>
+                    } else {<br>
+                    // code to run if condition is false<br>
+                    }
+            </p>
+            <p>
+                To test is number is even or odd:<br>
+                const n = 12;<br>
+                if (n%2 === 0) {<br>
+                console.log('n is an even number');<br>
+                } else {<br>
+                console.log('n is an odd number');<br>
+                }<br>
+                << 'n is an even number'        
+            </p>
+            <p>
+                A shorthand way of writing an if ... else statement is to use the ternary operator, ? , which takes three operands in the following format:
+                condition ? (//code to run if condition is true) : (//code to run if condition is false)<br>
+                Example:<br>
+                const n = 5;<br>
+                n%2 === 0 ? console.log('n is an even number') : console.log('n is an odd number');<br>
+                << 'n is an odd number'<br>
+            </p>
+            
+        <h4>
+            Switch Statements
+        </h4>
+            <p>
+                You can shorthand an if, else statement by using a switch statement.<br>
+                Example of if else:<br>
+                if (number === 4) {<br>
+                    console.log('You rolled a four');<br>
+                    } else if (number === 5) {<br>
+                    console.log('You rolled a five');<br>
+                    } else if(number === 6){<br>
+                    console.log('You rolled a six');<br>
+                    } else {<br>
+                    console.log('You rolled a number less than four');<br>
+                    }
+            </p>
+            <p>
+                We can rewrite the if else statement into a switch statement to be a lot easier to follow:<br>
+            Example:<br>
+            switch (number) {<br>
+                case 4:<br>
+                console.log('You rolled a four');<br>
+                break;<br>
+                case 5:<br>
+                console.log('You rolled a five');<br>
+                break;<br>
+                case 6:<br>
+                console.log('You rolled a six');<br>
+                break;<br>
+                default:<br>
+                console.log('You rolled a number less than four');<br>
+                break;<br>
+            }
+            </p>
+        <h4>
+            Loops
+        </h4>
+            <p>
+                Loops will run the code over and over again according to certain conditions
+            </p>
+            <p>
+                While loops will run while condition is true.<br>
+                Example:<br>
+                let bottles = 10;<br>
+                while (bottles > 0){<br>
+                    console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);<br>
+                    bottles--;<br>
+                }<br>
+                And here is a more concise way:<br>
+                Example:<br>
+                let bottles = 11;<br>
+                while (--bottles){<br>
+                    console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
+                }
+            </p>
+            <p>
+                Do while loops. Do something while a certain condition is met.<br>
+                Example:<br>
+                let bottles = 10;<br>
+                do {<br>
+                    console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);<br>
+                    bottles--;<br>
+                } while (bottles > 0)<br>
+            </p>
+            <p>
+                For loops:<br>
+                Example:<br>
+                for (initialization ; condition ; after) { do something }<br>
+                The initialization is run <strong>before</strong> the loops starts. The condition needs to be met 
+                so the loops can continue, and after is what will happen after each iteration.<br>
+                Example:<br>
+                for (let bottles = 10 ; bottles > 0 ; bottles--) {<br>
+                    console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);<br>
+                }<br>
+            </p>
+            <button type="button" class="chQuiz" onclick="ninjaQuizCh3()">Take Quiz</button>
+
     </main>
     <footer>
         <div>
