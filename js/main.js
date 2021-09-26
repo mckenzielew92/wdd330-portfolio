@@ -35,17 +35,17 @@ const links = [
 
   //js for activity in week one notes
   function checkNumber(){
-    let numberAsText = document.getElementById("number_input").nodeValue;
+    let numberAsText = document.getElementById("name-input").value
     let aNumber = parseInt(numberAsText);
     if(numberAsText != "" && !isNaN(aNumber)){
       let remainder = Math.abs(aNumber % 2);
       if(aNumber != 0 && remainder == 0){
         document.getElementById("result_display").innerHTML = 
-        aNumber + "is even.";
+        aNumber + " is even.";
       }
       else if(aNumber != 0 && remainder ==1){
         document.getElementById("result_display").innerHTML =
-        aNumber + "is odd.";
+        aNumber + " is odd.";
       }
       else {
         document.getElementById("result_display").innerHTML = 
