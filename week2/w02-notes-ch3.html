@@ -97,7 +97,115 @@
             <p>
                 Then you can use the unshift() to add an element at the beginning of the array.
             </p>
+        <h4>
+            Merging Arrays
+        </h4>
+            <p>
+                concat() method is used to merge an array with one of more arrays:<br>
+                avengers.concat(['Hulk','Hawkeye',Black Widow]);<br>
+                This will add these three elements to the end of the array you already have named
+                avengers.
+            </p>
+        <h4>
+            The join() Method
+        </h4>
+            <p>
+                Learn about join <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/3/k01nwtel?fromShare=true">here.</a>
+            </p>
+        <h4>Slicing and Splicing</h4> 
+            <p>
+                slice() will take a number of elements defined within the array. <br>
+                Example:<br>
+                avengers.slice(2,4) <br>
+                This will grab the elements starting at the third item and finishes at the 4th 
+                (The item with index 4 isn't included.)
+            </p>
+            <p> splice() removes item from an array and inserts new ones in their place<br>
+                Example:<br>
+                avengers.splice(3, 1, 'Scarlet Witch');<br>
+                << ['Hulk']<br>
+                The first number in the parentheses tells us the index at which to start the splice. In the example we started at index 3, 
+                which is the fourth item in the array ('Hulk'). The second number tells us how many items to remove from the array. You can also 
+                do this without removing any items in the array by indicating 0 removed. Be careful with splice() as the changes are permanent.
+            </p>
+        <h4>Reverse</h4>
+            <p>
+                We can reverse the items in an array by using the reverse() method.<br>
+                Example: avengers.reverse();
+            </p>
+        <h4>Sort</h4>
+            <p>
+                sort() will sort the items of the array in alphabetical order. If you have integers in your array, they will 
+                be sorted alphabetically as well. Taking them out of sequence numerically.
+            </p>
+        <h4>
+            Sets
+        </h4>
+            <p>
+                You want to use a set when you don't want any of the elements to be duplicated. To create a set, do:
+                Example:<br>
+                const list = new Set();
+            </p>
+        <h4>
+            Adding Values to Sets
+        </h4>
+            <p>
+                Values can be placed into a set using the add method:<br>
+                Example:<br>
+                list.add(1).add(2).add(3).add(4);<br>
+                << Set {1,2,3,4}<br>
+                If you try to add a value to the set that already exist, it will be ignored.
+            </p>
+            <p>
+                It can also be done like so:<br>
+                const numbers = new Set([1,2,3]);<br>
+                All non-primitive values, such as arrays and objects, are considered unique values, even if they 
+                contain the same values. On the face of it, this appears to allow duplicate values appear in a set:<br>
+                Example:<br>
+                const arrays = new Set().add([1]).add([1]);<br>
+                arrays<br>
+                << Set { [ 1 ], [ 1 ] }
+            </p>
+            <p>
+                You can find the numbers of values in a set by using the size() method.
+            </p>
+            <p>
+                has() method can be checked to see if a value is in a set.<br>
+                Example:<br>
+                avengers.has('Superman');
+            </p>
+            <p>
+                Using the delete() method will remove a value from the set. It will return a boolean 
+                true or false. True will mean it's removed. False will indicate it was not there in the first place
+                and cannot be removed.
+            </p>
+            <p>
+                clear() method will remove all values from the set.
+            </p>
+        <h4>
+            Converting Sets to Arrays
+        </h4>
+            <p>
+                <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/3/k01nwth8?fromShare=true">Learn about them here.</a>
+                
+It's also possible to use the Array.from() method to convert a set into an array. The following code would achieve the same result as using the spread operator above:<br>
+                Example:<br>
+                const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');<br>
+                const shoppingArray = Array.from(shoppingSet);<br>
+                By combining this use of the spread operator with the ability to pass an array to the new Set() constructor, we now have a convenient way to create a copy of an array with any duplicate values removed:<br>
+                Example:<br>
+                const duplicate = [3, 1, 4, 1, 5, 9, 2, 6 ,5,3,5,9];<br>
+<< [ 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 9 ]<br>
+const nonDuplicate = [...new Set(repeatedArray)];<br>
+<< [ 3, 1, 4, 5, 9, 2, 6 ]<br>
+            </p>
 
+        <h4>
+            Maps
+        </h4>
+            <p>
+                
+            </p>
     </main>
     <footer>
         <div>

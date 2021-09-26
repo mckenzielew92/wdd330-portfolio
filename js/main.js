@@ -32,3 +32,17 @@ const links = [
     newList.appendChild(link);
     parent.appendChild(newList);
   }
+
+  //js for notes
+  function checkNumber(){
+    let numberAsText=document.getElementById("number_input").nodeValue;
+    let remainder = numberAsText%2;
+    if(remainder==0){
+      document.getElementById("result_display").innerHTML = 
+      numberAsText + "is even."
+    }
+    else{
+      document.getElementById("result_display").innerHTML = 
+      numberAsText + "is odd.";
+    }
+  }
