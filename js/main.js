@@ -33,16 +33,27 @@ const links = [
     parent.appendChild(newList);
   }
 
-  //js for notes
+  //js for activity in week one notes
   function checkNumber(){
-    let numberAsText=document.getElementById("number_input").nodeValue;
-    let remainder = numberAsText%2;
-    if(remainder==0){
-      document.getElementById("result_display").innerHTML = 
-      numberAsText + "is even."
+    let numberAsText = document.getElementById("number_input").nodeValue;
+    let aNumber = parseInt(numberAsText);
+    if(numberAsText != "" && !isNaN(aNumber)){
+      let remainder = Math.abs(aNumber % 2);
+      if(aNumber != 0 && remainder == 0){
+        document.getElementById("result_display").innerHTML = 
+        aNumber + "is even.";
+      }
+      else if(aNumber != 0 && remainder ==1){
+        document.getElementById("result_display").innerHTML =
+        aNumber + "is odd.";
+      }
+      else {
+        document.getElementById("result_display").innerHTML = 
+        "0 is neither even or odd.";
+      }
     }
     else{
       document.getElementById("result_display").innerHTML = 
-      numberAsText + "is odd.";
+      "Please enter a number."
     }
   }
