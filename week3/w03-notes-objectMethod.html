@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content= "This is my page containing notes and projects from week 3 of WDD 330 at BYUI 2021">
+    <title>Week 3 Notes Object Method This</title>
+</head>
+<body>
+    <header>
+        <h1> Week 3 Notes</h1>
+    </header>
+    <main>
+        <h2>Object Method This</h2>
+            <h4>Chapter Summary</h4>
+            <p>
+                Functions that are stored in object properties are called “methods”.
+Methods allow objects to “act” like object.doSomething().
+Methods can reference the object as this.
+The value of this is defined at run-time.
+When a function is declared, it may use this, but that this has no value until the function is called.
+A function can be copied between objects.
+When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
+Please note that arrow functions are special: they have no this. When this is accessed inside an arrow function, it is taken from outside.
+            </p>
+            <h4>
+                What is an Object Method?
+            </h4>
+            <p>
+                Objects are created to represent something in the real world: users, orders and so on.<br>
+                Example: <br>
+                let user = {<br>
+                    name: "John",<br>
+                    age: 30<br>
+                };<br>
+                Then the user can act: Log-in, Log-out, select from cart, etc.
+            </p>
+            <p>
+                Example:<br>
+                user = {
+                    sayHi() { // same as "sayHi: function(){...}"<br>
+                    alert("Hello");<br>
+                    }<br>
+                };<br>
+            </p>
+            <h4>
+                This
+            </h4>
+            <p>
+                Sometimes you need certain information for the code to run properly. You can access
+                certain information by using <strong>this</strong> keyword.<br>
+                Example:<br>
+                let user = {<br>
+                    name: "John",<br>
+                    age: 30,<br>
+                    sayHi() {<br>
+                      // "this" is the "current object"<br>
+                    alert(this.name);<br>
+                    }<br>
+                    };<br>
+                  user.sayHi(); // John<br>
+            </p>
+
+
+
+    </main>
+    <footer>
+        <div>
+            <a href="/index.html">Back to Portfolio</a>
+        </div>
+    </footer>
+    <script src="w02.js"></script>
+</body>
+</html>
+            
