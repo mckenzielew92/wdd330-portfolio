@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content= "This is my page containing notes and projects from week 2 of WDD 330 at BYUI 2021">
+    <title>WDD 330 Week <!--Insert Week Here--></title>
+    <title>Notes on Ch.4: Functions</title>
+</head>
+<body>
+    <header>
+        <h1> Week 2 Notes</h1>
+    </header>
+    <main>
+        <h2>Chapter 4: Functions</h2>
+        <h4>Chapter Summary</h4>
+        <p>
+            This chapter covers:<br>
+            Defining functions―function declarations, function expressions, Function() constructors and the new arrow syntax
+
+Invoking a function
+
+Return values
+
+Parameters and arguments
+
+Hoisting―variables and functions
+
+Callbacks―functions as a parameter
+
+Project ― we’ll be using functions to make the Quiz Ninja code easier to follow
+        </p>
+        <p>Just a side note: There are no need for semi colons at the end of blocks!</p>
+        <h4>Arrow Functions</h4>
+        <p>
+            An arrow function can take a function written like so:<br>
+            Example:<br>
+            function square(x){<br>
+                return x*x;<br>
+            }<br>
+            And be re-written like this:<br>
+            Example:<br>
+            const square = x => x*x;<br>
+            Advantages to using arrow functions:<br>
+            They are much less verbose than normal function declarations.
+Single parameters don't need putting into parentheses.
+The body of the function doesn't need placing inside a block if it's only one line.
+The return keyword isn't required if the return statement is the only statement in the body of the function.
+They don't bind their own value of this to the function (we'll see why this is a particularly useful property when we cover objects later in the book).<br>
+More on this <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/4/k01nwtp9?fromShare=true">here.</a>
+        </p>
+        <button class="chQuiz" type=button onclick="ninjaQuizCh4()">
+            Go!
+        </button>
+
+    </main>
+    <footer>
+        <div>
+            <a href="/index.html">Back to Portfolio</a>
+        </div>
+    </footer>
+    <script src="w02.js"></script>
+</body>
+</html>

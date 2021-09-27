@@ -78,3 +78,6 @@ for(const [question,answer] of quiz) {
 // At the end of the game, report the player's score
 alert(`Game Over, you scored ${score} point${score !== 1 ? 's!' : ''}`);
 }
+
+//activity for week 2 notes ch. 4
+ninjaQuizCh4()
