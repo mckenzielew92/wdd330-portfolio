@@ -15,9 +15,71 @@
         <h2>Ch.5 Objects</h2>
             <h4>Chapter Summary</h4>
             <p>
-
+                This chapter will cover Object literals, adding properties to objects, Object methods, JSON, The Math 
+                Object the Date object the RegExp object and the project.
             </p>
-
+            <h4>
+                Object Literals
+            </h4>
+            <p>
+                **If a properties value is a function, it is a method.
+            </p>
+            <p>
+                An object literal is an object that is created by wrapping all it's 
+                properties in curly braces. {}<br>
+                Example:<br>
+                const superman = {<br>
+                    name: 'Superman',<br>
+                    'real name': 'Clark Kent',<br>
+                    height: 75,<br>
+                    weight: 235,<br>
+                    hero: true,<br>
+                    villain: false,<br>
+                    allies: ['Batman','Supergirl','Superboy'],<br>
+                    fly() {<br>
+                        return 'Up, up and away!';<br>
+                    }<br>
+                };
+            </p>
+            <p>
+                To create an object literal, simply enter a pair of curly braces. The following example creates an empty object that is assigned to the variable spiderman :<br>
+                Example:<br>
+                const spiderman = {};
+            </p>
+            <p>
+                ES6 provided a shorthand method of creating objects if a property key is the same as a variable name that the property value is assigned to:<br>
+                const ironMan = { name, realName };
+            </p>
+            <p>You can access the properties of an object using the dot notation:<br>
+                superman.name<br>
+                << 'Superman'
+            </p>
+            <p>
+                This is how you call an objects's method:<br>
+                superman.fly()<br>
+                << 'Up, up and away!'<br>
+                superman['fly']()<br>
+                << 'Up, up and away!'<br>
+            </p>
+            <h4>
+                Checking if Properties or Methods Exist
+            </h4>
+            <p>
+                The in operator can be used to check whether an object has a particular property. So, for example, we can check if the superman object has a property called city using this code:<br>
+                'city' in superman;<br>
+                << false
+            </p>
+            <p>
+                You can also check this way<br>
+                superman.hasOwnProperty('city');<br>
+                << false
+            </p>
+                <h4>
+                    The Date Object
+                </h4>
+                <p>
+                    Learn all about how to set dates <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/5/k01nwtza?fromShare=true">here!</a>
+                </p>
     </main>
     <footer>
         <div>
