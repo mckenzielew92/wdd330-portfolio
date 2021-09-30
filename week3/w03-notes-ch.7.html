@@ -42,6 +42,13 @@
 
                 The addEventListener() method is called on a node object, the node to which the event listener is being applied. For example, this code will attach an event listener to the document’s body:<br>
                 document.body.addEventListener('click',doSomething);<br>
+                Its first parameter is the type of event, and the second is a callback function that is invoked when the event occurs. 
+                <br>
+                Alternatively:<br>
+                function doSomething() {<br>
+                    alert('You Clicked!');<br>
+                    }<br>
+                    addEventListener('click',doSomething);
             </p>
 
 </main>
