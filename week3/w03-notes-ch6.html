@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content= "This is my page containing notes and projects from week 3 of WDD 330 at BYUI 2021">
+    <title>Week 3 Notes Ch.6</title>
+</head>
+<body>
+    <header>
+        <h1> Week 3 Notes</h1>
+    </header>
+    <main>
+        <h2><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/6/k01nvj2s?fromShare=true">Ch.6 The Document Object Model</h2></a>
+            <h4>Chapter 6 Summary</h4>
+            <p>
+                How to get elements by Id, ClassName, TagName, querySelector and querySelectorAll.
+                How to navigate the DOM. Getting and setting element's attributes, updating the DOM
+                by creating dynamic markup, changing the css of an element, and then the ninja quiz/project.
+            </p>
+            <h4>
+                What is the DOM?
+            </h4>
+            <p>
+                Document object Model or DOM, represents an HTML document as a network of connected nodes
+                that form a tree-like structure. It treats everything on the web like a node.
+            </p>
+            <p>
+                You can make elements from the html to an array by the following code:
+                <br>
+                const imageArray = Array.from(document.images);
+            </p>
+            <p>
+                Getting an element by Id is easy. You can select an h1 tag with an Id of title like so:<br>
+                const h1 = document.getElementById('title');
+            </p>
+            <h4>
+                document.querySelector()
+            </h4>
+            <p>
+                method allows you to use CSS notation to find thefirstelement in the document that matches that matches a CSS selector provided as an argument.
+                If no elements match, it will return null .
+            </p>
+            <h4>
+                document.querySelectorAll()
+            </h4>
+            <p>
+                The document.querySelectorAll() method also uses CSS notation but returns a node list of all the elements in the document that match the CSS query selector.
+                If no elements match, it will return an empty node list. For example, the following could be used instead of document.getElementById():<br>
+                document.querySelector('#bats');<br>
+                << <li class="vigilante hero" id="bats">Batman</li>
+                And this could be used instead of document.getElementsByClassName :<br>
+                document.querySelectorAll('.hero');<br>
+                << NodeList [<li class="hero">, <li id="bats">, <li class="hero">]
+            </p>
+            <h4>
+                jQuery
+            </h4>
+            <p>
+                jQuery is a popular JavaScript framework that makes it very easy to find elements on a page using a CSS-style syntax. It uses document.querySelectorAll() 
+                in the background whenever it can. For example, the jQuery code $('ul#roster').find('li#bats'); 
+                is basically doing the same as our previous example:<br>
+
+                const ul = document.querySelector('ul#roster');<br>
+                ul.querySelector('li#bats')<br>
+            </p>
+            <h4>
+                Getting and Setting Attributes
+            </h4>
+            <p>
+                The setAttribute can change the value of an element’s attributes. It takes two arguments: the attribute that you wish to change, and the new value of that attribute.
+
+                For example, if we wanted to change the class of the element in the wonderWoman variable to 'villain', we could do so using this code:<br>
+                wonderWoman.setAttribute('class', 'villain');<br>
+                wonderWoman.getAttribute('class');
+            </p>
+            <p>
+                If an element does not have an attribute, the setAttribute method can be used to add it to the element. For example, we can add an id of 'amazon' to the wonderWoman element:<br>
+                wonderWoman.setAttribute('id','amazon');<br>
+            </p>
+            <h4>
+                You can use Dot Notation
+            </h4>
+            <p>
+                The legacy DOM allows access to attributes using dot notation, like so:<br>
+                wonderWoman.id;<br>
+                This notation is still supported, although some attribute names such as class and for are reserved keywords in JavaScript, so we need to use className and htmlFor instead.<br>
+                To change the className:<br>
+                wonderWoman.className = 'hero'<br>
+                <strong></strong>But Careful!</strong>Changing the className property of an element by assignment will overwrite all other classes that have already been set on the element.
+                This problem can be avoided by using the classList property instead.
+            </p>    
+            <h4>
+                classList Property
+            </h4>
+            <p>
+                The add method can be used to add a class to an element without overwriting any classes that already exist. For example, we could add a class of 'warrior' to the wonderWoman element:<br>
+                wonderWoman.classList.add('warrior');<br>
+                To remove:<br>
+                wonderWoman.classList.remove('warrior');
+            </p>
+            <h4>
+                Toggle
+            </h4>
+            <p>
+                The toggle method is a particularly useful method that will add a class if an element doesn’t have it already, andremovethe class if it does have it. It returns true if the class was added and false if it was removed.
+                For example:<br>
+                wonderWoman.classList.toggle('hero'); // will remove the 'hero' class<br>
+                << false<br>
+                wonderWoman.classList.toggle('sport'); // will add the 'hero' class back<br>
+                << true<br>
+            </p>
+            <h4>Creating a Text Node</h4>
+            <p>
+                document.createTextNode() method will create a text node. enter a string to say what 
+                text you want entered as the parameter.<br>
+                example:<br>
+                const flash = document.createElement('li');<br>
+                const flashText = document.createTextNode('Flash');
+            </p>
+            <h4>
+                Appending Nodes
+            </h4>
+            <p>
+                Every node object has an appendChild() method that will add another node (given as an argument) as a child node. We want our newly created text node to be a child node of the list element node. 
+                This means that it’s the flash object that calls the method, with flashText as its argument:<br>
+                Example:<br>
+                flash.appendChild(flashText);<br>
+                This can be made simpler by using the textContent property that every element object has. This will add a text node to an element without the need to append it, 
+                so the code above could have been written as the following:<br>
+                const flash = document.createElement('li');<br>
+                flash.textContent = 'Flash';
+            </p>
+            <p>A function to create an element and text will make things much much simpler.<br>
+            Example:<br>
+            function createElement (tag,text) {
+                const el = document.createElement(tag);
+                el.textContent = text;
+                return el
+            }</p>
+            <p>
+                The insertBefore() method will place a new element before another element in the markup. It’s important to note that this method is called on theparent node. It takes two parameters: 
+                the first is the new node to be added, and the second is the node that you want it to go before. <br>
+                Example:
+                heroes.insertBefore(aquaman,wonderWoman);<br>
+                Moving an existing element to become the last element:<br>
+                heroes.appendChild(wonderWoman);<br>
+                You just need to append the child. There is no insertAfter(). 
+            </p>
+            <p>
+                Remove elements like this:<br>
+                heroes.removeChild(aquaman);
+            </p>
+            <p>The replaceChild() method can be used to replace one node with another. It’s called on the parent node and has two parameters: the new node and the node that is to be replaced. 
+                For example, if we wanted to change the content of the h1 tag that makes the title of the page, we could replace the text node with a new one, like so:<br>
+                const h1 = document.getElementById('title');<br>
+                const oldText = h1.firstChild;<br>
+                const newText = document.createTextNode('Justice League of America');<br>
+                h1.replaceChild(newText,oldText);
+            </p>
+            <h4>
+                Changing the HTML with inner.HTML
+            </h4>
+            <p>
+                h1.innerHTML = 'Suicide Squad';<br>
+                Instead of creating each element and text node individually, you can simply enter the raw HTML as a string. The relevant nodes will then be added to the DOM tree automatically. 
+                For example, we could change everything contained within the ul element:<br>
+                heroes.innerHTML = '&lt;li&gt;Harley Quinn&lt;/li&gt;&lt;li&gt;Deadshot&lt;/li&gt;&lt;li&gt;Killer Croc&lt;/li&gt;&lt;li&gt;Enchantress&lt;/li&gt;&lt;li&gt;Captain Boomerang&lt;
+                /li&gt;&lt;li&gt;Katana&lt;/li&gt;&lt;li&gt;Slipknot&lt;/li&gt;';<br>
+                This will now remove all the child elements of the <ul> element and replace them with the string of HTML that was provided.
+            </p>
+            <h4>
+                Updating CSS
+            </h4>
+            <p>
+                You can change the css through js! You can add a border to a property like so:
+                const heroes = document.getElementById('roster');<br>
+                const superman = heroes.children[0];<br>
+                superman.style.border = "red 2px solid";<br>
+                A better alternative would be to add a class of 'highlighted':<br>
+                superman.classList.add('highlighted');<br>
+                .highlighted{
+                    border: red 2px solid;
+                }
+            </p>
+            <p>
+                When updating css you <strong>have to use camelCase instead dashes.</strong><br> Example:<br>the CSS property background-color becomes backgroundColor. 
+                You can also make an element disappear by using superman.style.display = 'none';<br>
+                And then make it reappear by using display = 'block';
+            </p>
+            <button type="button" class="chQuiz" onclick="ninjaQuizCh6()">Take Quiz</button>
+
+
+            
+
+
+
+    </main>
+    <footer>
+        <div>
+            <a href="/index.html">Back to Portfolio</a>
+        </div>
+    </footer>
+    <script src="w03.js"></script>
+</body>
+</html>

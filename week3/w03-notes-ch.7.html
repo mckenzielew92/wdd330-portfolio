@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content= "This is my page containing notes and projects from week 3 of WDD 330 at BYUI 2021">
+    <title>Week 3 Notes Ch.7</title>
+</head>
+<body>
+    <header>
+        <h1> Week 3 Notes</h1>
+    </header>
+    <main>
+        <h2><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/7/k01nvj3m?fromShare=true">Ch.7 Events</h2></a>
+            <h4>Chapter 7 Summary</h4>
+            <p>
+                This chapter will cover: Intro to events, adding event listeners, the event object, mouse, keyboard and touch events, removing event listeners, stopping default browser,
+                even propagation, the the quiz.
+            </p>
+            <h4>
+                Event Listeners
+            </h4>
+            <p>
+                An event listener lets you know when something happens right as it happens. For example, when a user clicks a button, or when they click onto your page.
+                Every time the event occurs a callback function is called.<br>
+                The following code can be used to attach an event listener to the document that fires when the user clicks anywhere on the page:<br>
+                document.body.addEventListener("click", doSomething);<br>
+                It will call the function doSomething() when any part of the page is clicked on. Until that happens, the program will continue to run the rest of the code.
+            </p>
+            <h4>
+                The click Event
+            </h4>
+            <p>
+                The click event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen, making it a very useful all-round event covering many types of interaction.
+            </p>
+            <h4>
+                Using Event Listeners
+            </h4>
+            <p>
+                These were outlined in DOM level 2 and allow multiple functions to be attached independently to different events. They are supported in all modern browsers, although only in Internet Explorer from version 9 onwards.
+
+                The addEventListener() method is called on a node object, the node to which the event listener is being applied. For example, this code will attach an event listener to the document’s body:<br>
+                document.body.addEventListener('click',doSomething);<br>
+            </p>
+
+</main>
+<footer>
+    <div>
+        <a href="/index.html">Back to Portfolio</a>
+    </div>
+</footer>
+<script src="w03.js"></script>
+</body>
+</html>
