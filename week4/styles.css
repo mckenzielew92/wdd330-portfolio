@@ -51,7 +51,7 @@ have an x or o*/
 
 .board.x .cell:not(.x):not(.circle):hover::before, 
 .board.x .cell:not(.x):not(.circle):hover::after,
-.board.circle .cell:not(.x):not(.circle):hover::before {
+.board.circle .cell:not(.x):not(.circle):hover::before{
     background-color: lightgray;
 }
 
@@ -74,6 +74,7 @@ have an x or o*/
     border-right: none;
 }
 
+/*clear bottom border*/
 .cell:last-child,
 .cell:nth-child(8),
 .cell:nth-child(7){
@@ -81,8 +82,8 @@ have an x or o*/
 }
 
 .cell.x::before,
-.cell.x::after, 
-.board.x .cell:not(.x):not(.circle):hover::before, /*only apply hover effect when you are not already on a used cell*/
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after{
     content: '';
     position:absolute;
@@ -113,13 +114,13 @@ have an x or o*/
 /*the code below will round out the square to be a circle.*/
 .cell.circle::before,
 .board.circle .cell:not(.x):not(.circle):hover::before{
-    width:calc(var(--mark-size));
+    width: var(--mark-size);
     height: var(--mark-size);
 }
 /*white cut out of the O*/
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after{
-    width:calc(var(--mark-size) * .7);
+    width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
     background-color: white;
 }
