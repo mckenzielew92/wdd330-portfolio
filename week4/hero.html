@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>Hero Form</title>
+    <link rel="stylesheet" href="" type="text/css" media="screen"/>
+<link href="/css/normalize.css" rel="stylesheet" media="screen" type="text/css">
+<link href="/css/small.css" rel="stylesheet" media="screen" type="text/css">
+<link href="/css/medium.css" rel="stylesheet" media="screen" type="text/css">
+<link href="/css/large.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+<body>
+    <form id='hero'>
+        <h4>Testing</h4>
+        <label for='heroName'>Name:
+            <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32>
+            <!--The autofocus attribute give focus to this element when a page loads,
+            It is the same as adding this to js: document.forms.hero.heroName.focus();-->
+        </label>
+        <h4>For password type:</h4>
+        <label for='realName'>Real Name:
+            <input type='password' name='realName' id='realName'></label>
+        <button type='submit'>Submit</button>
+        <!--Adding checkboxes to list powers of the superhero-->
+        <p>Super Powers:</p>
+        <!--Notice that all the checkbox elements have the same 'name' property of 'powers'. 
+            This means they can be accessed as an HTML collection, like so:
+            form.powers;-->
+        <label for='flight'>Flight:
+            <!--make first appear checked-->
+            <input type='checkbox' id='flight' value='Flight' name='powers' checked>
+        </label>
+        <label for='strength'>Super Strength:
+            <input type='checkbox' id='strength' value='Strength' name='powers'>
+        </label>
+        <label for='speed'>Super Speed:
+            <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+        </label>
+        <label for='energy'>Energy Blasts:
+            <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+            </label>
+        <label for='telekinesis'>Telekinesis:
+            <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+        </label>
+    </form>
+    <form>
+        <h4>For value attribute of 10</h4>
+        <label for='donation-amount'>Enter amount to donate: 
+            <input type='text' id ='donation-amount' name='donationAmount' value='10'>
+        </label>
+        <h4>What type of hero are you?</h4>
+        <p>Using radios will only allow for one to be checked in a group of
+            the same name attribute.
+        </p>
+
+<label for='hero'>Hero:
+    <input type='radio' name='category' value='Hero' id='hero'>
+</label>
+<label for='villain'>Villain:
+    <input type='radio' name='category' value='Villain' id='villain'>
+</label>
+<label for='anti-hero'>Anti-Hero:
+    <input type='radio' name='category' value='Antihero' id='anti-hero'>
+</label>
+    </form>
+
+    <h4>Hidden input fields</h4>
+    <p>Hidden fields can be created using the type='hidden' It is not displayed to the browser
+        but have a value attribute that contains information the use already provided.
+        This is not to be used with sensitive data as it still is shown in html.
+    </p>
+    <h4>File input</h4>
+    <p>
+        Can be created by typing type='file'. These are used to upload files. Most browsers provide
+        a browse button to search for the file needed.
+    </p>
+    <h4>Using a number type input</h4>
+    <form>
+        <label for='age'>Age:
+            <input type='number' id='age' name='age' min=0 step=1></label>
+            <label for='City'>Base of Operations:
+                <select name='city' id='city'>
+                    <option value='' selected>Choose a City</option>
+                    <option value='Metropolis'>Metropolis</option>
+                    <option value='Gotham City'>Gotham City</option>
+                    <option value='Keystone City'>Keystone City</option>
+                    <option value='Coast City'>Coast City</option>
+                    <option value='Star City'>Star City</option>
+                </select>
+            </label>
+    </form>
+
+<script src='hero.js'></script>
+</body>
+</html>
