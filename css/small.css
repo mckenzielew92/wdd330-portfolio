@@ -1,7 +1,7 @@
 /***********GENERAL STYLES****************/
 body{
     margin: 0 auto;
-    max-width: 540px;
+    max-width: 75%;
     background-color: #2F323A;
 }
 
@@ -10,9 +10,11 @@ h1, h2, h3, h4, h5, h6{
     color: #F9F9F9;
 }
 
-main, p, ol, ol li, li a{
+main, p, ol, ol li, li a, label{
     color: #F9F9F9;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+li{
     margin: 15px;
 }
 
