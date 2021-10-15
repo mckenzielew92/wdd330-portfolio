@@ -3,6 +3,7 @@
  *  2. Create an array of links
  *  3. Create li element and add an a tag with the label and url
   */
+'use strict';
 const links = [
     {
       label: "Week 1",
@@ -22,7 +23,27 @@ const links = [
 },
     {
         label: "Challenge:1 Todo",
-        url: "challenge-1"
+        url: "challenge-1.html"
+    },
+    {
+      label: "Week 5",
+      url: "week5/index.html"
+    },
+    {
+      label: "Week 6",
+      url: "week6/index.html"
+    },
+    {
+      label: "Week 7",
+      url: "week7/index.html"
+    },
+    {
+      label: "Week 8",
+      url: "week8/index.html"
+    },
+    {
+      label: "Week 9",
+      url: "week9/index.html"
     }
   ]
 
