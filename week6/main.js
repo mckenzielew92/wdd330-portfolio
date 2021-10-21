@@ -84,6 +84,28 @@ document.addEventListener('DOMContentLoaded', () => {
         //grab the `li` by targeting the parent of the parent of the button (button -> div -> li)
         let item = this.parentNode.parentNode
         //grab the `ul` (li -> ul)
-        
+        let parent = item.parentNode
+        //grab the parent id
+        let id = parent.id
+
+        //check if the item should go in the completed or if it should be re-added to todo by using a ternary operator
+        let target = 
+        id === 'todo'
+        ? document.getElementById('completed')
+        : document.getElementById('todo')
+
+        //remove the item to it's current 'ul'
+        parent.removeChild(item)
+        //add the item to the new 'ul'
+        target.insertBefore(item, target.childNodes[0])
+    }
+
+    function removeItem(){
+        //grab the 'li' by targeting the parent of the parent of the button (button -> div -> li)
+        let item = this.parentNode.parentNode
+        //grab the 'ul' (li -> ul)
+        let parent = item.parentNode
+        //remove 'li' from 'ul'
+        parent.removeChild(item)
     }
 })

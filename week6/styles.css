@@ -78,6 +78,7 @@ li {
     align-items: center;
     background-color: var(--todo-bg-color);
     padding: 2%;
+    padding-left: 8%;
     box-sizing: border-box;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -115,4 +116,18 @@ button:hover svg path{
     /*make the remove icon a different color on hover*/
 .remove:hover svg path{
     fill: var(--svg-remove-hover-color);
+}
+div#home{
+    background-color: var(--todo-bg-color);
+    max-width: 15%;
+    padding: 2%;
+    margin: 10%;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+    text-decoration: none;
+}
+div#home:hover{
+    background-color: var(--done-bg-color);
 }
