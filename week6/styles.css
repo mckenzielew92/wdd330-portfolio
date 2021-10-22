@@ -117,7 +117,8 @@ button:hover svg path{
 .remove:hover svg path{
     fill: var(--svg-remove-hover-color);
 }
-div#home{
+a div#home{
+    text-decoration: none;
     background-color: var(--todo-bg-color);
     max-width: 15%;
     padding: 2%;
@@ -126,8 +127,8 @@ div#home{
     display: flex;
     justify-content: center;
     color: var(--font-color);
-    text-decoration: none;
+    
 }
 div#home:hover{
-    background-color: var(--done-bg-color);
+    background-color: var(--svg-hover-color);
 }
