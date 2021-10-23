@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+/*Desktop size*/
+body {
+    background-color: lightskyblue;
+}
+
+main {
+    width: 400px;
+    min-height: 600px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(72, 61, 139);
+    display: grid;
+    align-content: space-between;
+}
+
+#upper-content {
+    grid-row: 1/2;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+hr {
+    max-width: 50%;
+    border-width: 1px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    border-style: solid;
+}
+
+#empty-list {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+/************************************************/
+/* css for task list items*/
+
+
+.task-div {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    margin: 0 20px 0 20px;    
+    height: 50px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12pt;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 3px 3px 0 3px;
+}
+
+.check-box {
+    background: transparent;
+    border: transparent;
+    width: 50px;
+    height: 50px; 
+}
+
+.check-box img {
+    width: 40px;
+    margin: auto;
+}
+
+.checked-box {
+    /*add js to change display: block; when the empty checkbox is clicked*/
+    display: none;
+}
+
+.check-box img:hover {
+    cursor: pointer;
+}
+
+.task-text {
+    padding: 10px;
+    margin: auto 0;
+}
+
+.x-button {
+    background: transparent;
+    border: transparent;
+    width: 50px;
+    height: 50px;
+}
+
+.x-button img {
+    width: 40px;
+    margin: auto;
+}
+
+.x-button img:hover {
+    cursor: pointer;
+}
+/* end of css for task list items*/
+/************************************************/
+
+
+#task-list-footer {
+    font-family: 'Roboto Slab', serif;
+    font-size: 10pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    background-color: lightgray;
+    margin: 0 20px;
+    display: none; /*we need to make sure to change this to display: flex in js*/
+}
+
+#tasks-left {
+    margin: 0 auto 0 20px;
+    font-style: italic;
+}
+
+#task-list-footer button {
+    font-family: 'Roboto Slab', serif;
+    font-size: 10pt;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    margin: 0 10px 0 0;
+}
+
+#task-list-footer button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#add-new-task {
+    grid-row: 2/3;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto 60px;
+    margin: 20px;
+}
+
+#new-task-input {
+    height: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12pt;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#new-task-btn img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#new-task-btn {
+    background: transparent;
+    border: transparent;
+    width: 60px;
+    height: 60px;
+}
+
+#new-task-btn img:hover {
+    cursor: pointer;
+}
+
+
+
+
+/*Phone size*/
+@media screen and (max-width: 500px) {
+
+    body {
+        margin: 0;
+        background-color: white;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+}

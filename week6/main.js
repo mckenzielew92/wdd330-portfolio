@@ -1,3 +1,38 @@
+const toDo = []
+
+class ToDoClass {
+    constructor (id, content, completed){
+        this.id = id;
+        this.content = content;
+        this.completed = completed;
+        this.todo = {id: this.id, content: this.content, completed: this.completed}
+    }
+
+
+
+    addToArray(){
+        toDo.push(this.todo);
+        console.log(toDo);
+    }
+
+    saveTodo(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+    }
+
+    getTodo(key) {
+        let oldArray = JSON.parse(localStorage.getItem(key));
+        console.log(oldArray);
+        oldArray.forEach(object => {
+            addItemTodo(object.content);
+        })
+    }
+}
+
+let task = new ToDoClass();
+// window.addEventListener("load", () => {
+//     task.getTodo("key");
+// });
+
 //this tells the computer to wait until the html has loaded before performing javascript
 document.addEventListener('DOMContentLoaded', () => {
     //button to add new item
@@ -49,6 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
         //which is going to be the value set by the user in the input field.
         item.innerText = text
 
+        ///////////////////////add this as well without the parenthesis
+        let date = Date.now()
+        console.log(date);
+        const task = new ToDoClass(date, text, false);
+        task.addToArray()
+        //////////////////////add this to remove items and completed items
+        task.saveTodo("key", toDo)
+
+        item.id = date;
+
+
         //create container for our buttons remove and complete
         let buttons = document.createElement('div')
         buttons.classList.add('buttons')
@@ -88,16 +134,25 @@ document.addEventListener('DOMContentLoaded', () => {
         //grab the parent id
         let id = parent.id
 
+        const index = Array.from(item.parentNode.children).indexOf(item)
+        
+        if (toDo[index].completed === true){
+            toDo[index].completed = false 
+            }
+        else{
+        toDo[index].completed = true;
+        console.log(toDo)
+        }
+        
         //check if the item should go in the completed or if it should be re-added to todo by using a ternary operator
-        let target = 
-        id === 'todo'
-        ? document.getElementById('completed')
-        : document.getElementById('todo')
-
-        //remove the item to it's current 'ul'
-        parent.removeChild(item)
+        //let target = 
+        //id === 'todo'
+        //? document.getElementById('completed')
+        //: document.getElementById('todo')
         //add the item to the new 'ul'
-        target.insertBefore(item, target.childNodes[0])
+        const task = new ToDoClass();
+        task.saveTodo("key", toDo)
+
     }
 
     function removeItem(){
@@ -105,7 +160,32 @@ document.addEventListener('DOMContentLoaded', () => {
         let item = this.parentNode.parentNode
         //grab the 'ul' (li -> ul)
         let parent = item.parentNode
+        const index = Array.from(item.parentNode.children).indexOf(item)
+        toDo.splice(index, 1);
         //remove 'li' from 'ul'
         parent.removeChild(item)
+        const task = new ToDoClass();
+        task.saveTodo("key", toDo)
+        
     }
+    document.getElementById('completedTasks').addEventListener('click', sortByCompleted());
+    function sortByCompleted() {
+        toDo.forEach(object => {
+            if(object.completed === false) {
+                hideObject(object.id);
+            }else{
+                displayObject(object.id);
+            }
+        })
+    }
+    function hideObject(id){
+        //css change to hide
+        document.getElementById(id).style.display = "none";
+    }
+    function displayObject(id){
+        document.getElementById(id).style.display = "flex";
+    }
+
+    ////////filters//////////
+
 })
