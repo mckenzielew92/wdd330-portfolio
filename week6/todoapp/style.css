@@ -1,0 +1,193 @@
+
+/* variables */
+:root {
+    --font-color: #74D2B4;
+    --body-bg-color: #ccc;
+    --container-bg-color: #3B3659;
+    --todo-bg-color: #C75787;
+    --complete-bg-color: #FFEC51;
+    --svg-normal-color: #2d3436;
+    --svg-hover-color: #0984e3;
+    --svg-complete-color: #0984e3;
+    --svg-remove-color: #d63031;
+    --svg-remove-hover-color: #ff4757;
+}
+  *{
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin:auto;
+    background-color: var(--body-bg-color);
+    display:flex;
+    justify-content: center;
+    color: car(--font-color)
+}
+main{
+    min-width: 40%;
+    background-color: var(--container-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    margin-top:20px;
+    color:var(--font-color);
+    border-bottom: var(--font-color);
+}
+h3{
+    color: var(--font-color);
+    text-align-last: right;
+    margin-right: 30%;
+}
+ul li{
+    height: 50px;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    align-items: center;
+    font-size: .75em;
+}
+div#task-list-footer{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+div #tasks-left{
+    color: var(--font-color); 
+}
+
+div #tasks-left button{
+    margin: 15px;
+}
+button.remove{
+    background-color: var(--font-color);
+    color: var(--todo-bg-color);
+}
+p{
+    color: var(--font-color);
+}
+button#all-tasks-btn, button#active-tasks-btn, button#completed-tasks-btn, input.todo_submit{
+    background-color: var(--font-color);
+    color: var(--container-bg-color);
+    font-weight: 600;
+    padding-left:15px;
+    padding-right: 15px;
+    height: 3em;
+    font-size: 12px;
+}
+button#all-tasks-btn:hover, button#active-tasks-btn:hover, button#completed-tasks-btn:hover, input.todo_submit:hover{
+    background-color: var(--todo-bg-color);
+}
+form input[type=text]{
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 3em;
+}
+input.todo_submit{
+    border-radius: 10px;
+    height: 3.75em;
+    border:none;
+}
+
+div input, div h3, div, button.remove{
+    margin: 5px;
+    margin-left:15px;
+    display: flex;
+}
+
+input[type=checkbox]{
+    width: 50px;
+}
+form{
+    border: none;
+    width: 100%;
+    
+}
+
+
+/* we make it inline-block so that our `h2::after` will only span the length of the `h2` and not the whole row */
+h2{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: inline-block;
+    font-weight: bold;
+}
+h2::after{
+    content: '';
+    border-bottom: 2px solid var(--font-color);
+    display: block;
+    width: auto;
+}
+/* make the `header` a flex container to easily stack our elements in a column and automatically space them with `space-between` */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+/* give some simple styling to our `input` tag */
+input {
+  
+    background-color: var(--font-color);
+}
+button{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+/* make the `li` stretch the whole width and add some border to it*/
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--todo-bg-color);
+    padding: 2%;
+    padding-left: 8%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/* apply a different style to the completed tasks */
+#completed-task-btn{
+    background-color: var(--done-bg-color)
+}
+#completed .complete svg path {
+    fill: var(--svg-complete-color);
+}
+/* style the svg icons*/
+svg{
+    max-width: 25px;
+}
+/*change the color when we hover icons*/
+button:hover svg path{
+    fill: var(--svg-hover-color);
+}
+/*make the remove icon red*/
+.remove svg path {
+    fill: var(--svg-remove-color);    
+}
+    /*make the remove icon a different color on hover*/
+.remove:hover svg path{
+    fill: var(--svg-remove-hover-color);
+}
+a div#home{
+    text-decoration: none;
+    background-color: var(--todo-bg-color);
+    max-width: 15%;
+    padding: 2%;
+    margin: 10%;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+    
+}
+div#home:hover{
+    background-color: var(--svg-hover-color);
+}

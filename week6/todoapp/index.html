@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <title>ToDos</title>
+    <meta name="description" content="Todos that you can track" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <main>
+        <h1>Todos List</h1>
+        <form id="add_todo" class="add_todo">
+          <input autofocus type="text" id="todo_input" placeholder="Please Enter a Task Todo" maxlength="32">
+          <input type="submit" value="+" class="todo_submit">
+      </form>
+      
+        <ul class="todo_list"></ul>
+        <h3>Sort By:</h3>
+        <div id="task-list-footer">
+          <button id="all-tasks-btn">All</button>
+          <button id="active-tasks-btn">Active</button>
+          <button id="completed-tasks-btn">Complete</button><br>
+      </div>
+      <div id="tasks-left"></div>
+    </main>
+    <script src="ToDos.js" type="module"></script>
+  </body>
+</html>
