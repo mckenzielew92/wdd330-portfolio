@@ -23,7 +23,7 @@ const links = [
 },
     {
         label: "Challenge:1 Todo",
-        url: "challenge-1.html"
+        url: "week6/todoapp/index.html"
     },
     {
       label: "Week 5",
