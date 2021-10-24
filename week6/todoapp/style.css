@@ -72,11 +72,10 @@ p{
 button#all-tasks-btn, button#active-tasks-btn, button#completed-tasks-btn, input.todo_submit{
     background-color: var(--font-color);
     color: var(--container-bg-color);
-    font-weight: 600;
+    font-weight: bold;
     padding-left:15px;
     padding-right: 15px;
     height: 3em;
-    font-size: 12px;
 }
 button#all-tasks-btn:hover, button#active-tasks-btn:hover, button#completed-tasks-btn:hover, input.todo_submit:hover{
     background-color: var(--todo-bg-color);
@@ -84,16 +83,20 @@ button#all-tasks-btn:hover, button#active-tasks-btn:hover, button#completed-task
 form input[type=text]{
     border: none;
     border-radius: 10px;
-    width: 80%;
+    width: 70%;
     padding: 5px;
-    margin-top: 20px;
     margin-bottom: 20px;
     height: 3em;
+    font-weight: bold;
+
 }
 input.todo_submit{
     border-radius: 10px;
-    height: 3.75em;
-    border:none;
+    border: none;
+    font-weight: bold;
+    font-size: xx-large;
+    height: 50px;
+    margin-left: 5%;
 }
 
 div input, div h3, div, button.remove{
@@ -108,7 +111,7 @@ input[type=checkbox]{
 form{
     border: none;
     width: 100%;
-    
+    display:flex;
 }
 
 
@@ -176,18 +179,19 @@ button:hover svg path{
 .remove:hover svg path{
     fill: var(--svg-remove-hover-color);
 }
-a div#home{
+a#home{
     text-decoration: none;
-    background-color: var(--todo-bg-color);
+    font-weight: bold;
+    background-color: var(--font-color);
     max-width: 15%;
     padding: 2%;
     margin: 10%;
     border-radius: 15%;
     display: flex;
     justify-content: center;
-    color: var(--font-color);
+    color: var(--container-bg-color);
     
 }
-div#home:hover{
-    background-color: var(--svg-hover-color);
+a#home:hover{
+    background-color: var(--todo-bg-color);
 }
