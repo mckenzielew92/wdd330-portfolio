@@ -526,15 +526,6 @@ function shuffle(array) {
         [array[i - 1], array[j]] = [array[j], array[i - 1]];
     }
 }
-ask(name){
-    console.log('ask() invoked');
-    if(this.questions.length > 0) {
-        shuffle(this.questions);
-        this.question = this.questions.pop();
-        const question = `What is ${this.question.name}'s real name?`;
-        view.render(view.question,question);
-    }
-
-}
+//the rest of the code was references code we haven't added...
 
 
