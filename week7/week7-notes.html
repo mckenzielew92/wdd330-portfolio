@@ -25,6 +25,33 @@
             part of the book. If we place all our code with the 'use strict' all within a function, then won't we have to 
             call that function in order for our code to run? Would we do an onload? Idk
         </p>
+        <p>learn more on promises <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/11/k01nwv27?fromShare=true">here.</a></p>
+        <h3>
+            Pure Functions
+        </h3>
+        <p>
+            Pure functions must consist of three things:
+        </p>
+        <ol>
+            <li>
+                The return value of a pure function should only depend on the values provided as arguments. It doesn't rely on values from somewhere else in the program.
+            </li>
+            <li>
+                There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data.
+            </li>
+            <li>
+                Referential transparency. Given the same arguments, a pure function will always return the same result.
+            </li>
+        </ol>
+        <p>In order to follow these rules, any pure function must have:</p>
+        <li>
+            At lease one argument; otherwise the return value must depend on something
+            other than the arguments of the function, which breaks one of our rules.
+        </li>
+        <li>
+            A return value; otherwise there's no point in the function(unless it is changing values in
+            other places which is breaking another rule!)
+        </li>
     </main>
     <footer>
         <div>
