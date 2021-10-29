@@ -21,6 +21,44 @@
         <p>
             <i>Look at js source for JS notes!</i>
         </p>
+        <p>Ajax is a technique to communicate to servers asynchronously,
+            they also update web pages without reloading.</p>
+            <h3>
+                Clients and Servers
+            </h3>
+            <p>
+                Client = web browser. This will request a resource, usually a 
+                webpage from the server which processes the request and sends back a 
+                response to the client.
+            </p>
+            <p>
+                Ajax allows Javascript to request resources from the server on behalf
+                of the client. These resources are usually JSON data or fragments of HTML or text
+                rather than a whole webpage. 
+            </p>
+            <p> You need a server to request resources using Ajax. Including PHP, Ruby, Node.js or .NET.
+                This is usually from a back-end database. To practice using Ajax, you can either set up a local 
+                development server on your own computer, or request the files from an external website that uses cross-origin resource sharing (CORS)
+            </p>
+            <h3>
+                Fetch API
+            </h3>
+            <p>
+                A living standard for requesting and sending data asynchronously across a network.
+            </p>
+            <p>
+                The Fetch API provides a global fetch() method. It has one mandatory argument, which is the URL of the resource you wish to fetch.
+            </p>
+            <h3>
+                Response Interface
+            </h3>
+            <p>
+                This deals with the objects that's returned when the promise is fulfilled.
+                Each response object has an ok property that checks to see if the response is successful.
+                It's based on the HTTP status code, it can be accessed using the status property. It will be 200 if successful, and 201 if created,
+                204 when it is successful but no content returned. It will return true if the number is 200-299. 
+            </p>
+
     </main>
     <footer>
         <div>
