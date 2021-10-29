@@ -32,7 +32,7 @@ fetch(url)
 //a new promise that resolves to the response from the redirected URL.
 //Example of how a redirect response promise would be resolved:
 fetch(url)
-.then( response => response.redirected(newURL)); //redirects to another URL
+.then( response => response.redirected(newURL)) //redirects to another URL
 .then( /*do something else*/)
 .catch( error => console.log('There was an error: ', error))
 
@@ -42,7 +42,7 @@ fetch(url)
 //that resolves to a USVSting object that can be treated as a string in JavaScript.
 //EX:
 fetch(url)
-.then( response => response.text() ); //transforms text stream into a JavaScript string
+.then( response => response.text() ) //transforms text stream into a JavaScript string
 .then( text => console.log(text) )
 .catch( error => console.log('There was an error: ', error))
 //once the promise is resolved, we use the string() method to return a promise
@@ -55,7 +55,7 @@ fetch(url)
 //EX:
 
 fetch(url)
-.then( response => response.blob() ); //transforms data into ta blob object
+.then( response => response.blob() ) //transforms data into ta blob object
 .then( blob => console.log(blob.type) )
 .catch( error => console.log('There was an error: ', error))
 
@@ -64,7 +64,7 @@ fetch(url)
 //data into a promise that resolves to a JavaScript object
 //EX:
 fetch(url)
-.then( response => response.json() );//transforms data to javascript object
+.then( response => response.json() )//transforms data to javascript object
 .then( data => console.log(Object.defineProperties(data)) )
 .catch( error => console.log('There was an error: ', error))
 
@@ -98,7 +98,7 @@ fetch(request)
 //alternatively you can enter the URL and object directly as arguments of the fetch()
 //method without having to create a Request object:
 fetch('https://example.com/data', {
-    method 'GET',
+    method: 'GET',
     mode: 'cors',
     redirect: 'follow',
     cache: 'no-cache'
