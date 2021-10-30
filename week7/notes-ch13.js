@@ -92,7 +92,7 @@ const request = new Request('https://example.com/data', {
 //up of any of the properties listed above.
 //once the request object is assigned to a variable, it can then be used as a 
 //parameter of the fetch() method.
-fetch(request)
+fetch(request);
 .then( /*do something with response*/)
 .catch(//handle error)
 //alternatively you can enter the URL and object directly as arguments of the fetch()
@@ -105,6 +105,33 @@ fetch('https://example.com/data', {
 })
 .then(/*do something with response*/ )
 .catch( /*handle any errors*/)
-
 /***************************************** HEADERS INTERFACE ***************************************/
+//headers are used to pass any additional information about a request
+//this information may include the file type, cookie information,
+//authentication information and when the source was last modified
+
+//a new header instance is created with a constructor function:
+const headers = new Headers();
+//can take any arugument containing initial header values:
+const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+//has() can be used to check if the headers object contains the header
+//provided as an argument
+headers.has('Content-Type');
+//<<true
+
+//get() returns the value of the header provided as an argument
+//ex:
+headers.get('Content-Type');
+//<<'text/plain'
+
+//set() is used to set a value of an already existing header or
+//create a new header with the value provided as an argument 
+//it it doesn't exist.
+headers.set('Content-Type', 'application/json');
+
+//append() adds a new header to headers object
+headers.append('Accept-Encoding', 'gzip,deflate');
+
+//delete() removed the header provided as an arugment
+headers.delete('Accept-Encoding')
 
