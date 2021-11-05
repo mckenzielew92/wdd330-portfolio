@@ -42,9 +42,42 @@
         <p>If you only want to move an element vertically or horizontally, you can use the translateX or translateY function respectively.
             To move 45px to the right along the x axis, include:
         </p>
-        <p>transform: translateX(45px;) --to go up you would use Y</p>
+        <p>transform: translateX(45px;) --to go up you would use Y, transform does not work on inline elements. 
+            In order for transform to work you will need to add display: inline-block; in order for transform to work on inline 
+            elements.
+        </p>
+        <h3>
+            Scale
+        </h3>
+        <p>
+            the scale(x,y) function scales an element by the defined factors, horizontally then vertically.
+            If only one value is provided it will be used for both x and y. 
+        </p>
+        <p>Example:</p>
+        <p>
+            scale(1) would leave the element the same size. scale(2), would double it's proportions, scale,(0.5) would half them.
+        </p>
+        <p>With translate you can also use the scaleX(x) or scaleY(y) functions. which will scale onlythe 
+            vertical or horizontal dimensions. Always from the center.
+        </p>
+        <h3>
+            Rotation
+        </h3>
+        <p>
+            The rotate() function rotates an element around the point of origin by a specified angle balue.
+            Rotates from center.
+        </p>
+        <p>
+            Example:
+        </p>
+        <p>transform: rotate(10deg) translateX(40px) scale(1.5);</p>
+        <p>This will rotate 10 degrees clockwise. The transforms are applied in the order they are provided, so the rotate will occur first.</p>
+        <h3>Skew</h3>
+        <p>The skew(x,y) function specifies a skew along the x and y axes. If the second parameter is ommitted then the skew will occur only on the x axis.
+        </p>
+        <h3>Transform Origin</h3>
+        
 
-        <h1>Put your <span>dukes</span> up, sire</h1>
 
 
 
