@@ -76,7 +76,50 @@
         <p>The skew(x,y) function specifies a skew along the x and y axes. If the second parameter is ommitted then the skew will occur only on the x axis.
         </p>
         <h3>Transform Origin</h3>
-        
+        <p>You can use the transform-origin property to change the point of origin on the leement.</p>
+        <p>Example:</p>
+        <p>transform-origin: 0 0; More on rotating origin <a href="https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition/read/8/jzj69abg?fromShare=true">here.</a></p>
+        <h3>
+            Transitions
+        </h3>
+        <p>
+            CSS transitions and transforms are a lot more smooth than using jsvascript.
+            <strong>transitions</strong> allow values of CSS properties to change over time. THis provides
+            simple animations. Usually the changes are gradual. It can also be used to add a class.
+
+        </p>
+        <ol>Steps to create a transition using only CSS:</ol>
+        <li>Declare the original state of the element in the default style delcaration.</li>
+        <li>Declare the final state of your transitioned element; for example, a :hover state.</li>
+        <li>Include the transition function in your default style declaration using the transition properties, including: transition-property, transition-duration,
+        transition-timing-function, and transition-delay.</li>
+        <h3>Transition Property</h3>
+        <p> This defines the CSS properties of the element that should be transitioned. with all for all properties being the default.</p>
+        <p>Using a <strong>pre state</strong> and a <strong>post state</strong> for example, transition from
+        rectangular corners to rounded corners, set the original state to border-radius: 0;</p>
+        <h3>transition-duration property</h3>
+        <p>The transition-duration property sets how long the transition will take.  You can use seconds(s) or miliseconds(ms). 200ms is the optimal transition time.</p>
+        <h3>The transition-timing-function Property</h3>
+        <p>This lets you control the pace fo the transition, do you want to start off slow and then speed up? The opposite? You can do that with this property. This uses ease, linear, ease-out, eat-in, ease-in-out. default
+            ease is slow start, then it speeds up and ends slowly.
+        </p>
+        <h3>Shorthand example</h3>
+        <p>You can use shorthand and go from this:</p>
+        <p>transition-property: transform;<br>
+            transition-duration: 0.2s;  <br>
+            transition-timing-function: ease-out;<br>
+            transition-delay: 50ms;<br>
+        </p>
+        <p>To this:</p>
+        <p>transition: transform 0.2s ease-out 50ms;<br>
+        }</p>
+        <h3>Animations</h3>
+        <p>Animations allow you to control each step of an animation vie keyframes. <strong>Keyframes</strong>
+        are a snapshot that defines a starting or end point of any smooth transition. 
+        With CSS transitions, we're essentially limited to defining a first and last keyframe. It allows us to 
+        add any number of keyframes in between, to guide our animation in more complex ways.</p>
+        <p>More on keyframes <a href="https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition/read/8/jzj69ads?fromShare=true">here.</a></p>
+        <p>Keywords include to and from. (0%-100%)</p>
 
 
 
