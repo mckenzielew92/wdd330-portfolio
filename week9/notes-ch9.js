@@ -84,3 +84,60 @@ window.screen.availHeight
 document.cookie = 'name=Superman';
 //<< "name=Superman"
 
+/*The document.cookie property acts like a special type of string. 
+Assigning another cookie to it won’t overwrite the entire property, 
+it will just append it to the end of the string. So we can add more cookies by assigning them to document.cookie:*/
+
+document.cookie = 'hero=true';
+//<< "hero=true"
+
+document.cookie = 'city=Metropolis';
+//<< "city=Metropolis"
+
+//A cookie’s value can be changed by reassigning it to document.cookie using the same name but a different value.
+
+//Cookies by default expire after the browser session is finished,
+//to make it last beyond that, you can set the mas-age value.
+
+document.cookie = 'name=Batman; max-age=86400' // 86400 secs = 1 day
+
+//Do not rely on this if there is senstive information. It should never be saved like this.
+
+/*********************************THE PATH AND DOMAIN OF COOKIES*************************************/
+//By default, cookies can only be read by pages inside the same directory and domain as the file was set. 
+//This is for security reasons so that access to the cookie is limited.
+//The path can be changed so that any page in the root can read the cookie. You need to add
+//a string ; path=/ to the end of the cookie when it is set.
+document.cookie = 'name=Batman; path=/'
+//It’s also possible to set the domain by adding "; domain=domainName" to the end of the cookie:
+document.cookie = 'name=Batman; domain=sitepoint.com';
+//adding ; secure will make sure it is only transmitted over a secure HTTPS network:
+document.cookie = 'name=Batman; secure';
+//to delete a cookie, set the expire to be a time of the past.
+document.cookie = 'name=Batman; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+//If a cookie is a session cookie, it will expire when the tab or window is closed.
+//dealing with cookies can be quite cumbersome and usually are created in
+//their own library like cookies.js or jsCookie.
+/****************************************TIMEOUT*****************************************************************/
+//this will show an alert log after 3 seconds.
+window.setTimeout( () => alert("Time's Up!"), 3000);
+//<<4
+//the integer returned is an ID used to reference that particular timeout.
+//you can create another and it will return a new timeout reference id:
+window.setTimeout( () => alert("Time's Up!"), 3000);
+//<< 5
+//Now we can clear it like so:
+window.clearTimeout(5);
+//<< undefined
+/****************************************************** setInterval() **************************************************/
+//this will repeatedly invoke the callback function after every given number of milliseconds.
+//ex:
+function chant(){ console.log('Beetlejuice'); }
+//now we can set up interval:
+function chant(){ console.log('Beetlejuice'); }
+//now clear
+window.clearInterval(summon);
+//stay away from using they keyword this in these functions.
+
+
+
