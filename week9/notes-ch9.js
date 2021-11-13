@@ -139,5 +139,13 @@ function chant(){ console.log('Beetlejuice'); }
 window.clearInterval(summon);
 //stay away from using they keyword this in these functions.
 
+/*************** Head over to the animation folder to view different ways of animating a rotation on a square. ******************/
+/*Quiz Ninja Project
+We’re now going add a timer to give our quiz a “beat the clock' element. 
+We’ll do this using the window object’s setInterval() method to add a time limit. 
+First of all, we’ll add an element to the HTML for the timer.
+Update the <header> inside the index.html file to include an extra <div> element with an id of 'timer':*/
+
+
 
 
