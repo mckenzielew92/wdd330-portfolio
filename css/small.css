@@ -12,7 +12,20 @@ h1, h2, h3, h4, h5, h6{
 
 main, p, ol, ol li, li a, label{
     color: #F9F9F9;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+div.goto a{
+    background-color: #DCED31;
+    color: #2F323A;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+div.goto{
+    margin: 50px;
 }
 li{
     margin: 15px;
@@ -23,5 +36,19 @@ a{
 }
 div, p{
     margin: 10px;
+}
+p.note{
+    color:pink;
+    font-weight: 700;
+}
+/*********************************FORM STYLES*******************************************/
+input:invalid {
+    border: 2px red;
+}
+input:invalid:required {
+    background-color: pink;
+}
+input:valid {
+border: 2px solid black;
 }
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <script src="./form.js" defer></script>
+    <link href="form.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+<body>
+    <h1>Form Example</h1>
+    <p>A slightly more complex example, This simple form uses the novalidate attribute to turn off the browser's automatic validation; this lets our script take control over validation:</p>
+        <form novalidate>
+            <p>
+                <label for="mail">
+                    <span>Please enter an email address:</span>
+                    <input type="email" id="mail" name="mail" required minlength="8">
+                    <span class="error" aria-live="polite"></span> <!--The aria-live attribute is set on that <span> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.-->
+                </label>
+            </p>
+            <button>Submit</button>
+        </form>
+</body>
+</html>
