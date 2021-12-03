@@ -4,10 +4,11 @@ document.getElementById("year").innerhtml = d.getFullYear();
 //document.querySelector('meta[name=description]').setAttribute
 
 /***************************************** API ******************************************/
+const findName = document.getElementById("enter-name").value;
 const apiData = {
     url: 'https://pokeapi.co/api/v2/',
     type: 'pokemon',
-    name: 'pikachu', //modify by user input
+    name: findName, //modify by user input
 }
 
 const {url, type, name} = apiData
@@ -31,4 +32,14 @@ const generateHtml = (data) => {
     `
     const pokemonDiv = document.querySelector('.pokemon')
     pokemonDiv.innerHTML = html
-}   
+} 
+
+findName.addEventListener('click', grabName)
+function grabName(){
+if(nameInput == `${data.name}`){
+    return generateHtml
+}
+else{
+    `<div class="no-match">Sorry, that Pokemon doesn't exist.</div>`
+}
+}
