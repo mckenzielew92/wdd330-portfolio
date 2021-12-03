@@ -54,14 +54,9 @@ const links = [
       url: "week11/index.html"
     },
     {
-      label: "Week 12",
-      url: "week12/index.html"
-    },
-    {
-      label: "Week 13",
-      url: "week13/index.html"
-    }
-    
+      label: "Final Project",
+      url: "final/index.html"
+    } 
   ]
 
   /**create for loop to go through array and create li and a tags */

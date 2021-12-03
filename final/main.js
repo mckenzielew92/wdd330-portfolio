@@ -6,7 +6,7 @@ document.getElementById("year").innerhtml = d.getFullYear();
 /***************************************** API ******************************************/
 const findName = document.getElementById("enter-name").value;
 const apiData = {
-    url: 'https://pokeapi.co/api/v2/',
+    url: 'https://pokeapi.co/api/v2/pokemon?limit=150',
     type: 'pokemon',
     name: findName, //modify by user input
 }
@@ -34,12 +34,12 @@ const generateHtml = (data) => {
     pokemonDiv.innerHTML = html
 } 
 
-findName.addEventListener('click', grabName)
-function grabName(){
-if(nameInput == `${data.name}`){
-    return generateHtml
-}
-else{
-    `<div class="no-match">Sorry, that Pokemon doesn't exist.</div>`
-}
-}
+// findName.addEventListener('click', grabName)
+// function grabName(){
+// if(nameInput == `${data.name}`){
+//     return generateHtml
+// }
+// else{
+//     `<div class="no-match">Sorry, that Pokemon doesn't exist.</div>`
+// }
+// }
