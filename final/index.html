@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Api</title>
+    <meta description="This is an assignment to grab the input from user and show the pokemon of that category. You have the option to save it to favorites and 
+    go to favorites page to view them. Home page will be a page where you can enter the pokemon you'd like to find information on.">
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Poke Search</h1>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li id="active"><a href="#">Home</a></li>
+            <li><a href="find-type.html">Find Type</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form method="get">
+            <legend>Enter a Pokemon of Interest</legend>
+            <label>Pokemon Name:</label>
+            <input>
+        </form>
+        <div class="pokemon"></div>
+    </main>
+    <footer id="footer">
+        <a class="link" href="#top">Back to Top</a>
+        <br>
+        &copy<span id="year"></span> | McKenzie Lewis |  WDD330 | Final Project
+    </footer>
+</body>
+</html>
